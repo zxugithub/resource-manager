@@ -1,0 +1,36 @@
+
+<div class="center">
+  
+        <br>
+        Allocation -> By Resource
+        <br>
+        <br>  
+    <table border=1>
+      <tr>
+        <th class="cellwidth">Resource List</th>
+          <th *ngFor="let assign of assignments" class="cellwidth">
+            {{assign.month}}
+          </th>  
+      </tr> 
+      <tbody>
+        <tr>
+          <td class="cellwidth">
+            <select (change)="onChange($event.target.value)" size={{resources.length}} style="border: 0;" [(ngModel)]="selectedResource">
+              <option *ngFor="let res of resources" [value]="res.Id"> 
+                {{res.FirstName + " " + res.LastName}} 
+              </option>
+            </select>
+          </td>
+          <td class="cellwidth" *ngFor="let assign of assignments; let i=index">
+              <select size={{assign.assigns.length}} style="border: 0;">
+                <option *ngFor="let ass of assign.assigns" disabled>
+                    {{ass.proj + ":  " + ass.assign}}
+                </option>
+              </select>
+            </td>                    
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  

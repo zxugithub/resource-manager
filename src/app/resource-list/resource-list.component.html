@@ -1,0 +1,57 @@
+<!--<mat-grid-list cols="20" rowHeight="1:9">
+  <mat-grid-tile [colspan]="1" class="rectangle">
+    <mat-list> 
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="19" class="rectangle1">-->
+<!--
+<div class="container" >
+  <div class="row">   
+    <div id="preview" class="col s12 m9 l12" class="position">
+      <p class="text-danger">You clicked on: <strong>{{ message }}</strong></p>
+      <br />
+     <table datatable [dtOptions]="dtOptions" class="row-border hover" width="83em" border="1"></table>
+    </div>
+  </div>
+</div>-->
+<!--</mat-grid-tile>
+</mat-grid-list>-->
+<div class="container" >
+    <div class="row">   
+      <div id="preview" class="col s12 m9 l12" class="position">
+        <p class="text-danger">You clicked on: <strong>{{ message }}</strong></p>
+        <br />
+      <table datatable class="row-border hover" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Rate</th>
+            <th>Manager ID</th>
+            <th>Department</th>
+            <th>Resource Type</th>
+            <th>Hire Date</th> 
+            <th>End Date</th> 
+            <th>Comment</th>            
+          </tr>
+        </thead>
+          <tbody>
+            <tr *ngFor="let resource of ListData">
+            <!--  <a [routerLink]="['/editResource', resource.id]"> -->
+              <td>{{resource.id}}</td>
+              <td>{{resource.firstName}}</td>
+              <td>{{resource.lastName}}</td>
+              <td>{{resource.rate}}</td>
+              <td>{{resource.managerId}}</td>
+              <td>{{resource.department}}</td>
+              <td>{{resource.resourceType}}</td>
+              <td>{{resource.hireDate}}</td>
+              <td>{{resource.endDate}}</td>
+              <td>{{resource.Comment}}</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>

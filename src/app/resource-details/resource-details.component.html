@@ -1,0 +1,104 @@
+<div class="space">
+    <mat-grid-list cols="7" rowHeight="600px">
+    <!--<mat-grid-tile [colspan]="1" class="rectangle">-->
+    <mat-grid-tile [colspan]="1" [style.border-right]="'1px solid #ddd'" 
+                [style.border-left]="'1px solid #ddd'" [style.border-top]="'1px solid #ddd'"
+                [style.border-bottom]="'1px solid #ddd'">  
+      <mat-list> 
+        <a mat-list-item href="#">Richard Li</a>
+        <a mat-list-item href="#">Sherif</a>
+        <a mat-list-item href="#">Zhiming Xu</a>
+      </mat-list>
+    </mat-grid-tile>
+<!--<mat-grid-tile [colspan]="6" class="rectangle1">-->
+    <mat-grid-tile [colspan]="6" [style.border-right]="'1px solid #ddd'" 
+    [style.border-left]="'1px solid #ddd'" [style.border-top]="'1px solid #ddd'"
+    [style.border-bottom]="'1px solid #ddd'">
+    <div class="add-form-container">
+      <div class="ui icon message" *ngIf="newResource">
+        <i class="notched check green icon"></i>
+        <i class="close icon" (click)="newResource = null"></i>
+        <div class="coneightt">
+          <div class="header">
+            New resource added!
+          </div>
+          <p>Name: {{newResource.name}}</p>
+        </div>
+      </div>
+      <form class="ui large form" #resourceForm="ngForm" (submit)="onSubmit(resourceForm)" [class.loading]="loading">
+        <!--<div class="field">
+          <label>Manager Name</label>
+          <input type="text" placeholder="ManagerId" name="managerId" ngModel>
+        </div> -->
+        <div class="fields">
+          <div class="eight wide field">
+            <label>First Name</label>
+            <input type="text" placeholder="First Name" name="firstName" ngModel>
+          </div>
+          <div class="eight wide field">
+            <label>Last Name</label>
+            <input type="text" placeholder="Last Name" name="lastName" ngModel>
+          </div>         
+        </div>
+        <div class="fields">
+          <div class="eight wide field">
+            <label>Rate</label>
+            <input type="text" placeholder="Rate" name="rate" ngModel>
+          </div>
+          <div class="eight wide field">
+            <label>Manager Name</label>
+            <input type="text" placeholder="ManagerId" name="managerId" ngModel>
+          </div>  
+        </div>
+        <div class="fields">
+          <div class="eight wide field">
+            <label>Department</label>
+            <input type="text" placeholder="Department" name="department" ngModel>
+          </div>
+          <div class="eight wide field">
+            <label>Resource Type</label>
+            <input type="text" placeholder="ResourceType" name="resourceType" ngModel>
+          </div>  
+        </div>  
+        <div class="fields">
+          <div class="eight wide field">
+            <label>Hire Date</label>
+            <input type="text" placeholder="HireDate" name="hireDate" ngModel>
+          </div>
+          <div class="eight wide field">
+            <label>Termination Date</label>
+            <input type="text" placeholder="TerminationDate" name="terminationDate" ngModel>
+          </div>  
+        </div>  
+        <div class="eight wide field">
+          <label>Comment</label>
+          <input type="text" size="80" placeholder="Coment" name="coment" ngModel>
+        </div>                           
+        <!--
+        <div class="equal width fields">
+          <div class="field">
+            <label>Phone</label>
+            <input type="text" maxlength="5" placeholder="(###)" name="areaCode" ngModel>
+          </div>
+          <div class="field">
+            <label>&nbsp;</label>
+            <input type="text" maxlength="3" placeholder="###" name="prefix" ngModel>
+          </div>
+          <div class="field">
+            <label>&nbsp;</label>
+            <input type="text" maxlength="4" placeholder="####" name="lineNumber" ngModel>
+          </div>
+        </div>
+        <div class="field">
+          <label>Photo URL</label>
+          <input type="text" placeholder="http://cdn.com/profile.jpg" name="photo" ngModel>
+        </div>
+        -->
+        <button type="submit" class="ui submit large grey button right floated">Submit</button>
+      </form>
+    </div>
+    </mat-grid-tile>
+    </mat-grid-list>
+    </div>
+    
+    

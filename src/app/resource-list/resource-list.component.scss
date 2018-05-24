@@ -1,0 +1,40 @@
+.space {
+    padding-top:20px; 
+    padding-left:30px;
+    padding-right:30px; 
+    padding-bottom:20px; 
+}
+
+.rectangle {
+    background-color: cyan;
+}
+
+.rectangle1 {
+    background-color: rgb(21, 255, 0);
+}
+
+div.position {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 1150px;
+
+}
+
+/*
+   server-side-angular-way.component.css
+*/
+.no-data-available {
+    text-align: center;
+  }
+  
+  /*
+     src/styles.css (i.e. your global style)
+  */
+  .dataTables_empty {
+    display: none;
+  }
+
+  .field-length {
+    max-width:500px;
+  }

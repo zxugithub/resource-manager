@@ -1,0 +1,57 @@
+
+<div class="center">
+  <form #allocateForm="ngForm" (ngSubmit)="onSubmit(allocateForm.value)">
+      <br>
+      Allocation -> Allocating
+      <br>
+      <br>  
+  <table border=1>
+    <tr>
+      <th class="cellwidth">Resource</th>
+      <th class="cellwidth">Month-Year</th>
+      <th class="cellwidth">Project</th>     
+      <th class="cellwidth">Allocation</th>     
+      <th class="cellwidth">Save</th>     
+    </tr> 
+    <tbody>
+      <tr>
+        <td class="cellwidth">
+          <select id="resource" name="resource" size={{resources.length}}  style="border: 0;" ngModel>
+            <option *ngFor="let res of resources" [value]="res.Id"> 
+              {{res.FirstName + " " + res.LastName}}
+            </option>
+          </select>
+        </td>
+        <td class="cellwidth">          
+            <select id="month-year" name="month-year" ngModel size=7 style="border: 0;" ngModel>
+                <option *ngFor="let month of monthYears" [value]="month.month"> 
+                  {{month.month}}
+                </option>
+              </select>
+        </td>
+        <td class="cellwidth">
+          <select id="project" name="project" ngModel size={{projects.length}} style="border: 0;" ngModel>
+            <option *ngFor="let proj of projects" [value]="proj.Id" class="element"> 
+              {{proj.Name}}
+            </option>
+          </select>
+        </td>
+        <td class="cellwidth">
+          <div *ngFor="let proj of projects">
+            <input type="text" class="heighttext" name="allocation" ngModel>
+          </div>  
+        </td>  
+        <td class="cellwidth">
+          <div *ngFor="let proj of projects">
+              <button type="submit" class="heighttext">Save</button>
+          </div>
+        </td>             
+      </tr>
+    </tbody>
+  </table>
+</form>  
+</div>
+
+<div [routerLink]="['/byresource']">
+    
+</div>

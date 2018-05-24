@@ -1,0 +1,53 @@
+
+<!--<div class="ui menu header" *ngIf="auth?.isLoggedIn()">-->
+    
+  <div class="ui container" *ngIf="auth?.isLoggedIn()">
+    <div>   
+      <div class="dropdown">
+        <button class="dropbtn" class="ui primary button logout">Resource
+            &nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a [routerLink]="['/resources']">All</a>
+          <a [routerLink]="['/new']">New</a>
+          <a [routerLink]="['/edit']">Edit</a>
+          <a href="#">Remove</a>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn" class="ui primary button logout">Project
+            &nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a [routerLink]="['/projects']">All</a>
+            <a href="#">New</a>
+            <a href="#">Edit</a>
+            <a href="#">Remove</a>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn" class="ui primary button logout">Allocation
+            &nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a [routerLink]="['/allocating']">Allocating</a>
+            <a href="#">By Project</a>
+            <a [routerLink]="['/byresource']">By Resource</a>
+            <a href="#">Overall Staus</a>       
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn" class="ui primary button logout">Forecast
+            &nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Budget</a>
+            <a href="#">Head Count</a>      
+        </div>
+      </div>       
+    </div>
+    <div class="right menu" *ngIf="auth.isLoggedIn()">
+      <button class="dropbtn" class="ui primary button logout" (click)="logout()">Logout</button>
+    </div>
+  </div>
+<!--</div>-->
