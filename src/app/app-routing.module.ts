@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ResourceListComponent } from './resource-list/resource-list.component';
 import { ResourceDetailsComponent} from './resource-details/resource-details.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { AllocatingComponent } from './allocating/allocating.component';
 import { AllocationByResourceComponent } from './allocation-by-resource/allocation-by-resource.component';
 import { LoginComponent } from './login/login.component';
@@ -21,8 +22,23 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'resourceDetails',
+    component: ResourceDetailsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'editResource/:id',
+    component: ResourceDetailsComponent,
+    canActivate: [AuthGuard]
+  }, 
+  {
     path: 'projects',
     component: ProjectListComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'projectDetails',
+    component: ProjectDetailsComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -35,16 +51,7 @@ const routes: Routes = [
     component: AllocationByResourceComponent,
     canActivate: [AuthGuard]
   },
-  {
-    path: 'new',
-    component: ResourceDetailsComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'editResource/:id',
-    component: ResourceDetailsComponent,
-    canActivate: [AuthGuard]
-  },  
+ 
   {
     path: 'login',
     component: LoginComponent

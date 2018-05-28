@@ -11,6 +11,7 @@ export class ResourceDetailsComponent implements OnInit, OnDestroy {
 
   id: number;
   private sub: any;
+  newResource: Resource;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -23,4 +24,8 @@ export class ResourceDetailsComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.sub.unsubscribe();
   }  
+
+  onSubmit (reource) {
+
+  }
 }

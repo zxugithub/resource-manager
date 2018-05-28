@@ -1,0 +1,97 @@
+<div class="space">
+  <mat-grid-list cols="7" rowHeight="600px">
+  <!--<mat-grid-tile [colspan]="1" class="rectangle">-->
+  <mat-grid-tile [colspan]="1" [style.border-right]="'1px solid #ddd'" 
+              [style.border-left]="'1px solid #ddd'" [style.border-top]="'1px solid #ddd'"
+              [style.border-bottom]="'1px solid #ddd'">  
+    <mat-list> 
+      <a mat-list-item href="#">Serice Pricing</a>
+      <a mat-list-item href="#">Group TFSA</a>
+      <a mat-list-item href="#">Slice</a>
+    </mat-list>
+  </mat-grid-tile>
+<!--<mat-grid-tile [colspan]="6" class="rectangle1">-->
+  <mat-grid-tile [colspan]="6" [style.border-right]="'1px solid #ddd'" 
+  [style.border-left]="'1px solid #ddd'" [style.border-top]="'1px solid #ddd'"
+  [style.border-bottom]="'1px solid #ddd'">
+  <div class="add-form-container">
+    <div class="ui icon message" *ngIf="newResource">
+      <i class="notched check green icon"></i>
+      <i class="close icon" (click)="newResource = null"></i>
+      <div class="coneightt">
+        <div class="header">
+          New Project added!
+        </div>
+        <p>Name: {{newProject.name}}</p>
+      </div>
+    </div>
+    <!--<form class="ui large form" #resourceForm="ngForm" (submit)="onSubmit(resourceForm)" [class.loading]="loading">-->
+    <form class="ui large form" #resourceForm="ngForm" (submit)="onSubmit(resourceForm)">
+      <div class="fields">
+        <div class="eight wide field">
+          <label>Project Id</label>
+          <input type="text" placeholder="Id" name="Id" ngModel>
+        </div>
+        <div class="eight wide field">
+          <label>Project Name</label>
+          <input type="text" placeholder="Prject Name" name="Name" ngModel>
+        </div>         
+      </div>
+      <div class="fields">
+        <div class="eight wide field">
+          <label>Description</label>
+          <input type="text" placeholder="Description" name="Description" ngModel>
+        </div>
+        <div class="eight wide field">
+          <label>Total Budget</label>
+          <input type="text" placeholder="TotalBudget" name="TotalBudget" ngModel>
+        </div>  
+      </div>
+      <div class="fields">
+        <div class="eight wide field">
+          <label>StartDate</label>
+          <input type="text" placeholder="StartDate" name="StartDate" ngModel>
+        </div>
+        <div class="eight wide field">
+          <label>End Date</label>
+          <input type="text" placeholder="EndDate" name="EndDate" ngModel>
+        </div>  
+      </div>  
+      <div class="fields">
+        <div class="eight wide field">
+          <label>Remaining Budget</label>
+          <input type="text" placeholder="RemainingBudget" name="RemainingBudget" ngModel>
+        </div>
+        <div class="eight wide field">
+          <label>Portfolio</label>
+          <input type="text" placeholder="Portfolio" name="Portfolio" ngModel>
+        </div>          
+      </div> 
+      <div class="fields">       
+        <div class="eight wide field">
+          <label>MS Number</label>
+          <input type="text" size="80" placeholder="MsNumber" name="MsNumber" ngModel>
+        </div> 
+        <div class="eight wide field">
+          <label>MS Name</label>
+          <input type="text" size="80" placeholder="MsName" name="MsName" ngModel>
+        </div>         
+      </div> 
+      <div class="fields">       
+        <div class="eight wide field">
+          <label>Status</label>
+          <input type="text" size="80" placeholder="Status" name="Status" ngModel>
+        </div> 
+        <div class="eight wide field">
+          <label>Comment</label>
+          <input type="text" size="80" placeholder="Comment" name="Comment" ngModel>
+        </div>         
+      </div>                                
+      <button type="submit" class="ui submit large grey button right floated">Submit</button>
+    </form>
+  </div>
+  </mat-grid-tile>
+  </mat-grid-list>
+  </div>
+  
+  

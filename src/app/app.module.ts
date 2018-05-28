@@ -25,6 +25,7 @@ import { ResourceDetailsComponent } from './resource-details/resource-details.co
 import { ProjectListComponent } from './project-list/project-list.component';
 import { AllocatingComponent } from './allocating/allocating.component';
 import { AllocationByResourceComponent } from './allocation-by-resource/allocation-by-resource.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 //import { DataTablesModule } from 'datatables';
 
 
@@ -36,8 +37,11 @@ import { AllocationByResourceComponent } from './allocation-by-resource/allocati
     ResourceListComponent,
     ResourceDetailsComponent,
     ProjectListComponent,
+    ProjectDetailsComponent,
+
     AllocatingComponent,
-    AllocationByResourceComponent
+    AllocationByResourceComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
